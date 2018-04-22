@@ -4,14 +4,15 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.3.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'activeadmin' 
+gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 gem 'rails', '~> 5.2.0'
+gem 'devise'
+gem 'gravtastic'
 # Use sqlite3 as the database for Active Record
-group :development do
-  gem 'sqlite3'
-end
-group :production do
-  gem 'pg'
-end
+
+gem 'sqlite3'
+
 gem 'carrierwave' 
 gem 'net-ssh'
 
@@ -68,3 +69,4 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'rb-readline'
